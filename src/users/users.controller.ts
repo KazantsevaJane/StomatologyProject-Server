@@ -21,9 +21,13 @@ export class UsersController {
         return this.userService.getById(id)
     }
 
+    // @Get()
+    // getOneByMail(@Body () findByMailDto: FindByMailDto): (Promise<User> | undefined) {
+    //     return this.userService.getByEmail(findByMailDto)
+    // }
     @Get()
-    getOneByMail(@Body () findByMailDto: FindByMailDto): (Promise<User> | undefined) {
-        return this.userService.getByEmail(findByMailDto)
+    getOneByMail(email: string): (Promise<User> | undefined) {
+        return this.userService.getByEmail(email)
     }
 
     @Post()

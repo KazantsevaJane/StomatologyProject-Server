@@ -14,11 +14,11 @@ export class User{
     @Prop()
     DOB: string
     @Prop()
-    PhoneNumber: string
+    phoneNumber: string
     @Prop()
-    Mail: string
+    email: string
     @Prop()
-    Password: string
+    password: string
 }
 
 export const UserSchema = SchemaFactory.createForClass(User)

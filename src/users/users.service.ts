@@ -19,9 +19,12 @@ export class UsersService {
         return this.userModel.findById(id)
     }
 
-    async getByEmail(findByMailDto: FindByMailDto): (Promise<User> | undefined) {
-        const mail = new this.userModel(findByMailDto)
-        return this.userModel.findOne({Mail: mail.Mail})
+    // async getByEmail(findByMailDto: FindByMailDto): (Promise<User> | undefined) {
+    //     const emailObject = new this.userModel(findByMailDto)
+    //     return this.userModel.findOne({email: emailObject.email}) //тут может быть ошибка
+    // }
+    async getByEmail(email: string): (Promise<User> | undefined) {
+        return this.userModel.findOne({email: email})
     }
 
     async create(userDto: CreateUserDto): Promise<User> {

@@ -3,8 +3,8 @@ export class CreateUserDto {
     readonly name: string
     readonly surname: string
     readonly DOB: string
-    readonly PhoneNumber: string
-    readonly Mail: string
-    readonly Password: string
+    readonly phoneNumber: string
+    readonly email: string
+    readonly password: string
 
 }
