@@ -4,6 +4,7 @@ import {UsersService} from "./users.service";
 import {User} from "./schemas/user.schema";
 import {Schema} from "mongoose";
 import {FindByMailDto} from "./dto/findByMail.dto";
+import {CreateNormUserDto} from "./dto/create-norm-user.dto";
 
 @Controller('users')
 export class UsersController {
@@ -34,4 +35,9 @@ export class UsersController {
     create(@Body () createUserDto: CreateUserDto): Promise<User> {
         return this.userService.create(createUserDto)
     }
+
+    // @Post()
+    // create(@Body () createNormUserDto: CreateNormUserDto): Promise<User> {
+    //     return this.userService.create(createNormUserDto)
+    // }
 }

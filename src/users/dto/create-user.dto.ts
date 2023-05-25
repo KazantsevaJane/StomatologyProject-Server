@@ -1,10 +1,10 @@
 export class CreateUserDto {
     readonly id: string
-    readonly name: string
-    readonly surname: string
+    readonly firstName: string
+    readonly lastName: string
+    readonly patronymic: string
     readonly DOB: string
-    readonly phoneNumber: string
     readonly email: string
     readonly password: string
-
+    readonly role: string
 }

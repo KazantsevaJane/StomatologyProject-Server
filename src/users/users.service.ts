@@ -15,9 +15,13 @@ export class UsersService {
         return this.userModel.find().exec()
     }
 
-    async getById(id: string): Promise<User> {
-        return this.userModel.findById(id)
-    }
+    // async getById(id: string): Promise<User> {
+    //     return this.userModel.findById(id)
+    // }
+
+     async getById(id: string): Promise<User> {
+         return this.userModel.findOne({id: id})
+     }
 
     // async getByEmail(findByMailDto: FindByMailDto): (Promise<User> | undefined) {
     //     const emailObject = new this.userModel(findByMailDto)
